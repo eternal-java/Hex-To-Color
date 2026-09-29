@@ -1,0 +1,108 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#14161B">
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+ 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Color picker"
+            android:textColor="#F2F3F7"
+            android:textSize="26sp"
+            android:fontFamily="sans-serif-medium"/>
+ 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:text="Drag to mix a color, tap it to copy the hex"
+            android:textColor="#8A8F9C"
+            android:textSize="14sp"/>
+ 
+        <!-- Hero: the selected color -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+ 
+            <View
+                android:id="@+id/prevColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+ 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:orientation="vertical"
+                android:padding="22dp">
+ 
+                <TextView
+                    android:id="@+id/hexText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textIsSelectable="false"
+                    android:text="#000000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="38sp"
+                    android:textStyle="bold"/>
+ 
+                <TextView
+                    android:id="@+id/rgbText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="monospace"
+                    android:text="RGB  0, 0, 0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </FrameLayout>
+ 
+        <!-- Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+ 
+            <com.eternal.hexTocolor.ColorState
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"/>
+ 
+            <com.eternal.hexTocolor.ColorPickerView
+                android:id="@+id/colorSqr"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="14dp"/>
+        </LinearLayout>
+ 
+        <TextView
+            android:id="@+id/copyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Copy hex"
+            android:textColor="#14161B"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+</ScrollView>
+ 

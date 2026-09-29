@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hex To Color</string>
+    <string name="hello_world">Hello, World!</string>
+    <string name="hextext">HexText</string>
+    <string name="color_picker">Color Picker</string>
+    <string name="hextext_1">hextext</string>
+    <string name="color_picker_1">color_picker</string>
+</resources>
